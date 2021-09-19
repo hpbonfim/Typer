@@ -1,13 +1,79 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Staatliches&display=swap');
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  width: 100%;
+  min-height: 100vh;
+  color: #e1e1e1;
+  background-color: #1e1e1e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Staatliches', cursive;
+}
+
+.background {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .valid-keys {
+  font-size: 8rem;
+  font-weight: bold;
+  min-width: 600px;
+  border-bottom: 2px solid white;
+  font-family: 'Bungee', cursive;
+  pointer-events: none;
+}
+
+.container .valid-keys .matched {
+  background-color: #96d5fa;
+  pointer-events: none;
+  color: black;
+  font-size: 8rem;
+}
+
+.container .valid-keys .remainder {
+  opacity: 0.5;
+  pointer-events: none;
+  font-size: 8rem;
+}
+
+.container .completed-words {
+  width: max-content;
+  height: 100vh;
+  overflow-y: scroll;
+  position: fixed;
+  top: 0;
+  right: 0;
+  text-align: left;
+  padding: 20px 40px;
+  font-size: 1.3rem;
+  line-height: 2.5rem;
+  opacity: 0.6;
+}
+
+.container .typed-keys {
+  margin-top: 20px;
+  font-size: 1.3rem;
+  width: 600px;
+  overflow: hidden;
 }
